@@ -3,7 +3,7 @@ package com.backendstsform.demo;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.ui.Model;
-import com.backendstsform.demo.dto.UserDto;
+import com.backendstsform.demo.UserDto;
 
 @Controller
 public class WelcomeController {

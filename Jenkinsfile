@@ -7,7 +7,7 @@ tools{
   stages{
     stage("checkout"){
 	   steps{
-	      git branch: 'main', url: 'https://github.com/SAROJ-2207/fullstack_reg_form.git'
+	      git branch: 'main', url: 'https://github.com/Ranjankumarjena-rj/fullstack_reg_form.git'
 			}
 		}
 	stage("maven build"){

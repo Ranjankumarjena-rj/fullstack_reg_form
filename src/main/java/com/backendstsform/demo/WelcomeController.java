@@ -13,8 +13,4 @@ public class WelcomeController {
         return "index";
     }
 }
-@GetMapping("/users")
-public String getAllUsers(Model model) {
-    model.addAttribute("users", userService.getAllUsers());
-    return "users";
-}
+

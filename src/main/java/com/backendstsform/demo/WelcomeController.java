@@ -7,8 +7,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class WelcomeController {
 
 	@GetMapping("/")
-	public String welcome() {
-		return "index";
+	public String showForm(Model model) {
+    model.addAttribute("userDto", new UserDto()); // ← this line missing
+    return "index";
 	}
 	
 }

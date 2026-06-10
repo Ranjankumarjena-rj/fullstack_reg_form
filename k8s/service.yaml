@@ -1,0 +1,13 @@
+# service.yml
+apiVersion: v1
+kind: Service
+metadata:
+  name: saroj-fullstack-service
+spec:
+  type: NodePort
+  selector:
+    app: saroj-fullstack
+  ports:
+    - port: 80
+      targetPort: 9000
+      nodePort: 30090

@@ -1,7 +1,7 @@
 pipeline{
 agent any
 tools{
- jdk'JAVA_HOME'
+ jdk 'JAVA_HOME'
  maven 'M2_HOME'
  }
   stages{
@@ -14,6 +14,19 @@ tools{
 	   steps{
 	     sh 'mvn clean package'
 			}
-		}	
+		}
+    stage("docker build"){
+		steps{
+		 sh "docker build -t ranjankumarjena/saroj-fullstag-project  ."
+		 }
+	   }
+	stage("docker push"){
+	    steps{
+		withCredentials([string(credentialsId: 'ranjankumarjena', variable: 'password')]) {
+        sh "echo \$password | docker login -u ranjankumarjena --password-stdin"
+		sh 'docker push ranjankumarjena/saroj-fullstag-project'
+	}
+	}
 	}
 }
+

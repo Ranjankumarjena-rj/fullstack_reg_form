@@ -1,0 +1,23 @@
+# deployment.yml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: saroj-fullstack-deployment
+  labels:
+    app: saroj-fullstack
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: saroj-fullstack
+  template:
+    metadata:
+      labels:
+        app: saroj-fullstack
+    spec:
+      containers:
+        - name: saroj-fullstack
+          image: ranjankumarjena/saroj-fullstack-project:latest
+          ports:
+            - containerPort: 9000
+          imagePullPolicy: Always

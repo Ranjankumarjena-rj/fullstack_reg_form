@@ -25,8 +25,8 @@ tools{
 		withCredentials([string(credentialsId: 'ranjankumarjena', variable: 'password')]) {
         sh "echo \$password | docker login -u ranjankumarjena --password-stdin"
 		sh 'docker push ranjankumarjena/saroj-fullstag-project'
+	     }
+    	}
 	}
-	}
-	}
+  }
 }
-

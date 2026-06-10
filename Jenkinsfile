@@ -17,14 +17,14 @@ tools{
 		}
     stage("docker build"){
 		steps{
-		 sh "docker build -t ranjankumarjena/saroj-fullstag-project  ."
+		 sh "docker build -t ranjankumarjena/saroj-fullstack-project  ."
 		 }
 	   }
 	stage("docker push"){
 	    steps{
 		withCredentials([string(credentialsId: 'ranjankumarjena', variable: 'password')]) {
         sh "echo \$password | docker login -u ranjankumarjena --password-stdin"
-		sh 'docker push ranjankumarjena/saroj-fullstag-project'
+		sh 'docker push ranjankumarjena/saroj-fullstack-project'
 	     }
     	}
 	}

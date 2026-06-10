@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.backendformdemo</groupId>
-	<artifactId>backend_form-demo26</artifactId>
+	<artifactId>saroj-fullstack-project</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>backend_form</name>
 	<description>Spring Boot Backend form</description>
